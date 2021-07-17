@@ -98,9 +98,7 @@ prompt_context() {
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=/usr/local/bin:$PATH:~/src/osx/osxscripts.git/scripts
-export PATH="$(brew --prefix)/opt/ruby/bin:$PATH"
-export PATH="$HOME/.gem/ruby/$(ruby -v | cut -f 2 -d ' ' | cut -d '.' -f 1-2).0/bin:$PATH"
+export PATH=/usr/local/bin
 export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR='mvim -f --nomru'
 
@@ -110,12 +108,8 @@ alias d="ls -lG"
 alias da="ls -alG"
 alias where=which
 alias rdss="find . -name '*.DS_Store' -type f -ls -delete"
-alias st="stoken | tail -n 1 | tr -d '\n' | pbcopy"
 alias cd=z
 alias cd-=popd
-
-# builds
-alias jb="./gradlew clean build shadowJar"
 
 # git
 alias c="git checkout"
