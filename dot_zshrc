@@ -98,7 +98,7 @@ prompt_context() {
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export PATH=/usr/local/bin
+export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
 export EDITOR='mvim -f --nomru'
 
@@ -116,6 +116,8 @@ alias c="git checkout"
 alias cb="git checkout -b"
 alias pull="git pull"
 alias p="git push"
+alias gs="git status"
+alias gd="git diff"
 alias pu='(){ git push --set-upstream $1 $(git symbolic-ref --short HEAD); }'
 alias rebase="git rebase master"
 alias cm="git commit -m "
