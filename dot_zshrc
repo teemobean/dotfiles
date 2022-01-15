@@ -111,6 +111,8 @@ alias where=which
 alias rdss="find . -name '*.DS_Store' -type f -ls -delete"
 alias cd=z
 alias cd-=popd
+alias b=bat
+alias nnn="~/src/macos/nnn.git/nnn"
 
 # git
 alias c="git checkout"
@@ -124,7 +126,6 @@ alias rebase="git rebase master"
 alias cm="git commit -m "
 alias bvv="git branch -vv"
 alias add="git add"
-alias nnn="~/src/macos/nnn.git/nnn"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
