@@ -80,7 +80,7 @@ prompt_context() {
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-#   export EDITOR='mvim'
+#   export EDITOR='vim'
 # fi
 
 # Compilation flags
@@ -100,7 +100,8 @@ prompt_context() {
 
 export PATH=/usr/local/bin:$PATH
 export PATH="$HOME/.cargo/bin:$PATH"
-export EDITOR='mvim -f --nomru'
+# --nomru for mvim
+export EDITOR='vim -f'
 
 # aliases
 alias u="cd .."
@@ -123,6 +124,7 @@ alias rebase="git rebase master"
 alias cm="git commit -m "
 alias bvv="git branch -vv"
 alias add="git add"
+alias nnn="~/src/macos/nnn.git/nnn"
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
