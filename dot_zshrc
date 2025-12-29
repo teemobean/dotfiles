@@ -155,30 +155,33 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 eval "$(zoxide init zsh)"
 # eval "$(starship init zsh)"
 
-function _vim {
+function vimchezmoi {
     if chezmoi source-path "$1" 2>/dev/null; then
         chezmoi edit "$1"
     else
         vim "$1"
     fi
 }
-function _mvim {
+function mvimchezmoi {
     if chezmoi source-path "$1" 2>/dev/null; then
         chezmoi edit "$1"
     else
         mvim "$1"
     fi
 }
-function _neovide {
+function neovidechezmoi {
     if chezmoi source-path "$1" 2>/dev/null; then
         chezmoi edit "$1"
     else
         ~/src/macos/neovide.git/target/release/neovide "$1"
     fi
 }
-alias e=_vim
-alias ee=_mvim
-alias ne=_neovide
+alias e=vim
+alias ee=mvim
+alias ne=neovide
+alias _e=vimchezmoi
+alias _ee=mvimchezmoi
+alias _ne=neovidechezmoi
 
 # Secretive Config
 export SSH_AUTH_SOCK=/Users/tim/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
