@@ -11,7 +11,6 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'morhetz/gruvbox'
 Plugin 'tomasr/molokai'
-Plugin 'tpope/vim-fugitive'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -19,10 +18,8 @@ Plugin 'bling/vim-bufferline'
 Plugin 'tpope/vim-surround'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'xolox/vim-misc'
-Plugin 'xolox/vim-easytags'
 Plugin 'majutsushi/tagbar'
 call vundle#end()
 
@@ -64,7 +61,7 @@ imap <S-Tab> <C-d>
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in") | exe 'NERDTree' argv()[0] | wincmd p | ene | endif
-""autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+"autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 "autocmd BufEnter * wincmd p
 
 " Comments
@@ -72,9 +69,6 @@ let g:EnhCommentifyPretty = 'Yes'
 let g:EnhCommentifyBindInNormal = 'Yes'
 let g:EnhCommentifyBindInVisual = 'Yes'
 let g:EnhCommentifyBindInInsert = 'No'
-
-" indents
-let g:indent_guides_enable_on_vim_startup=1
 
 " show tabs
 set list
@@ -89,6 +83,9 @@ set expandtab
 set tabstop=2
 set sw=2
 set cinoptions+=(0,W1s
+
+" indent-guides
+let g:indent_guides_enable_on_vim_startup=1
 
 " Completion
 set completeopt=longest,menuone
@@ -132,7 +129,9 @@ set showbreak=++++
 set shortmess=imnrwx
 
 " set the guioptions.
-set guioptions=aeirM
+if !has('nvim')
+  set guioptions=aeirM
+endif
 
 " Lets keep some global viminfo
 set viminfo='20,\"50
@@ -210,7 +209,7 @@ set wildignore+=*.class
 autocmd BufRead,BufNewFile *.fs,*.fsx,*.fsi,*.ml set mat=2 sm
 
 " Autocmds for C/C++ files.
-autocmd BufRead,BufNewFile *.java,*.cs,*.c,*.cpp,*.h,*.hpp,*.idl set sm mat=2 sw=4
+autocmd BufRead,BufNewFile *.java,*.cs,*.c,*.cpp,*.h,*.hpp,*.idl set sm mat=2
 
 " Autocmds for VB files
 autocmd BufRead,BufNewFile *.vb setlocal filetype=vbnet
@@ -228,9 +227,10 @@ autocmd BufRead,BufNewFile *.css set sw=2 tabstop=2
 " Autocmds for JS
 autocmd BufRead,BufNewFile *.js set sw=2 tabstop=2
 autocmd BufRead,BufNewFile *.json set sw=2 tabstop=2
+autocmd BufRead,BufNewFile *.ts set sw=2 tabstop=2
 
 " Autocmds for asp/aspx
-autocmd BufRead,BufNewFile *.asp,*.aspx set sw=2 tabstop=2
+autocmd BufRead,BufNewFile *.asp,*.aspx set sw=4 tabstop=4
 
 " Autocmds for makefiles
 autocmd BufRead,BufNewFile makefile,*.mak,*.mif set noexpandtab tabstop=4 sw=4
