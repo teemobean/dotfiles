@@ -176,8 +176,8 @@ function neovidechezmoi {
         ~/src/macos/neovide.git/target/release/neovide "$1"
     fi
 }
-alias e=vim
-alias ee=mvim
+alias e=nvim
+alias ee=vim
 alias ne=neovide
 alias _e=vimchezmoi
 alias _ee=mvimchezmoi
