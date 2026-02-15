@@ -187,5 +187,7 @@ alias _e=vimchezmoi
 alias _ee=mvimchezmoi
 alias _ne=neovidechezmoi
 
+alias yy="open -a Yoink"
+
 # Secretive Config
 export SSH_AUTH_SOCK=/Users/tim/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
