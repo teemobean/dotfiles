@@ -11,8 +11,15 @@
 
 theme = Solarized Osaka Night
 font-family = "Berkeley Mono"
+font-thicken = true
+macos-titlebar-style = transparent
+window-save-state = always
+shell-integration-features = no-cursor
+cursor-style = block
+
 window-height = 50
 window-width = 145
+
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 
 # Splits
