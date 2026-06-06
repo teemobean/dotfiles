@@ -186,6 +186,7 @@ alias ne=neovide
 alias _e=vimchezmoi
 alias _ee=mvimchezmoi
 alias _ne=neovidechezmoi
+alias bearcli='/Applications/Bear.app/Contents/MacOS/bearcli'
 
 alias yy="open -a Yoink"
 
