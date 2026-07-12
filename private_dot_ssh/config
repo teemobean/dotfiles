@@ -18,6 +18,17 @@
 #IdentityFile ~/.ssh/id_rsa
 #IdentityFile ~/.ssh/id_ecdsa
 #IdentityFile ~/.ssh/id_dsa
+#
+
+Host github-timngdev.com
+  HostName github.com
+  User git
+  IdentityFile /Users/tim/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/14a171e2b27dbc97a222d153fbd95c14.pub
+
+Host github.com
+  HostName github.com
+  User git
+  IdentityFile /Users/tim/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/add85206234bd47578720ddf3ab96f11.pub
 
 Host *
   IdentityAgent ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
