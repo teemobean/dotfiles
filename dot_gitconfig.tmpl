@@ -18,11 +18,11 @@
     required = true
 
 # https://www.motowilliams.com/conditional-includes-for-git-config
-[includeIf "gitdir:~/msft_src/"]
-    path = ~/.config/code/msft/.gitconfig
-
 [includeIf "gitdir:~/src/"]
     path = ~/.config/code/personal/.gitconfig
+
+[includeIf "gitdir:~/src.timngdev/"]
+    path = ~/.config/code/timngdev/.gitconfig
 
 [includeIf "gitdir:~/.local/share/chezmoi/"]
     path = ~/.config/code/personal/.gitconfig
