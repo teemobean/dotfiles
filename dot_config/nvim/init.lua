@@ -44,7 +44,7 @@ require("lazy").setup({
     name = "catppuccin",
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme("catppuccin")
+      vim.cmd.colorscheme("token")
     end,
   },
   { "folke/tokyonight.nvim", lazy = true },
@@ -52,6 +52,7 @@ require("lazy").setup({
 
   -- Plenary (required by many plugins)
   { "nvim-lua/plenary.nvim" },
+  { 'ThorstenRhau/token', version = '*' },
 
   -- Treesitter
   {

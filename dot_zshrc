@@ -4,7 +4,7 @@
 # Path to your oh-my-zsh installation.
 export TERM="xterm-256color"
 # export ZSH=/Users/tim/.oh-my-zsh
-source "/opt/homebrew/opt/spaceship/spaceship.zsh"
+# source "/opt/homebrew/opt/spaceship/spaceship.zsh"
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -157,7 +157,7 @@ POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 # source ~/src/osx/powerlevel9k.git/powerlevel9k.zsh-theme
 
 eval "$(zoxide init zsh)"
-# eval "$(starship init zsh)"
+eval "$(starship init zsh)"
 
 function vimchezmoi {
     if chezmoi source-path "$1" 2>/dev/null; then
