@@ -23,14 +23,15 @@
 Host github-timngdev.com
   HostName github.com
   User git
-  IdentityFile ~/.ssh/github-timngdev.pub
   IdentitiesOnly yes
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519_timngdev
 
 Host github.com
   HostName github.com
   User git
-  IdentityFile ~/.ssh/github-teemobean.pub
   IdentitiesOnly yes
-
-Host *
-  IdentityAgent ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentityFile ~/.ssh/id_ed25519_teemobean
